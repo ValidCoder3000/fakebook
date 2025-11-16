@@ -62,6 +62,8 @@ const currentSubscriber = new Subscriber(20, 'Emmanuel', 'eeolannye@gmail.com', 
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModalBtn");
 const closeBtn = document.querySelector(".close");
+const button = document.querySelector("#button");
+const text = document.querySelector("textarea");
 
 btn.addEventListener("click", function() {
   modal.style.display = "block";
@@ -76,3 +78,14 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+
+
+button.addEventListener('click', function() {
+    const typedText = text.value;
+    if (typedText === '') return;
+    const news = document.createElement('p')
+    news.textContent = typedText;
+    const postsSection = document.querySelector('section');
+    postsSection.appendChild(news);
+    text.value = '';
+})

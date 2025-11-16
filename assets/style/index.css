@@ -1,0 +1,129 @@
+@import 'reset.css';
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    /* background-color: grey; */
+    h2 {
+        color:aqua;
+    }
+}
+
+header {
+    background-color: black;
+    
+    .container_class {
+        display: flex;
+        margin-left: 100px;
+        margin-right: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+    }
+
+    li {
+        color: white;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.box_wrapper {
+    display: flex;
+    background-color: red;
+    flex-direction:column;
+    gap: 20px;
+    /* line-height: 30px; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    /* height: 200px;
+    width: 400px; */
+
+    .box {
+        background-color: grey;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    button {
+        background-color: blue;
+        color: white;
+        font-size: 500;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        width: 15%;
+    }
+
+
+}
+
+form {
+    background-color: rgb(129, 129, 122);
+    color:aliceblue;
+    padding: 20px;
+
+    textarea {
+        background-color: white;
+        width: 500px;
+        resize: vertical;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        /* cursor: pointer; */
+    }
+}
+
+#group {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+    #imageInput {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    i { 
+        /* width: 40px;    
+        height: 40px;    */
+        object-fit: contain;
+        transition: 0.2s ease;
+        background-color: purple;
+    }
+
+    textarea {
+        color: black;
+    }
+}
+
+/* main {
+    background-color: grey;
+} */
+
+
+
+
+/* label {
+    font-size: 100px;
+    font-weight: 500;
+} */
+
+

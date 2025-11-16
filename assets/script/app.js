@@ -14,7 +14,7 @@ class User {
     set id (id) { this.#id = id}
     set email(email) { this.#email = email;}
     set name(name) { this.#name = name;}
-    set userName(userName) { this.#userName}
+    set userName(userName) { this.#userName = userName }
 
     get id() {return this.#id}
     get email() { return this.#email}
@@ -30,12 +30,26 @@ class Subscriber extends User {
     #pages=[];
     #groups=[];
     #canMonetize;
+        // constructor (id, name, userName, email, pages, initialState = false, groups)
     constructor (id, name, userName, email, pages, canMonetize, groups) {
         super (id, name, userName, email)
         this.#pages = pages;
-        this.#canMonetize = canMonetize;
+        // this.#canMonetize = initialState;
+        this.#canMonetize = canMonetize
         this.#groups = groups;
     }
+
+    // getCanMonetize () {
+    //         return this.#canMonetize;
+    //     }
+
+    //     setCanMonetize(state) {
+    //     if (typeof state === "boolean") {
+    //     this.#canMonetize = state;
+    //     } else {
+    //     throw new Error("Value must be boolean");
+    //     }
+    // }
 
     getInfo() {
         return `${this.#pages}`+`${this.#canMonetize}`+`${this.#groups}`
@@ -43,4 +57,22 @@ class Subscriber extends User {
 
 }
 
-const Subscriber = new Subscriber()
+const currentSubscriber = new Subscriber(20, 'Emmanuel', 'eeolannye@gmail.com', ['Book Page', 'History Page', 'Movie Page'], true, ['Second group', 'Wisdom group'])
+
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("openModalBtn");
+const closeBtn = document.querySelector(".close");
+
+btn.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});

@@ -1,4 +1,3 @@
-# fakebook
 ## Fakebook
 
 A simple social media web app inspired by Facebook, built to replicate core features like posting, user interaction, and a dynamic feed.

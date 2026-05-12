@@ -18,4 +18,5 @@ A simple social media web app inspired by Facebook, built to replicate core feat
 - Hoist the folder from your desktop by clicking the "Go Live" button on the bottom right corner of the screen.
 - On the hoisted HTML shown on the browser try typing something inside the textbox.
 - Only when you have tried typing something will you have the chance of posting by clicking the "Post" button.
-- Pitures can also be added by clicking the upload button, allowing you to choose the picture you would want to post with your 
+- Pitures can also be added by clicking the upload button, allowing you to choose the picture you would want to post with your typed comment.
+- Once you have inserted your comments and/or your picture, click on the Post button to attach the post below the textbox.

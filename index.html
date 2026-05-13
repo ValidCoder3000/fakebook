@@ -60,4 +60,92 @@
         </div>
       </main>
     </body>
+        <!-- <body>
+        <header>
+            <div class="container_class">
+                <h2>Fakebook</h2>
+                <nav>
+                    <ul>
+                        <li>Friends</li>
+                        <li>Pages</li>
+                        <li>Groups</li>
+                        <li>My ads</li>
+                        <li>Settings</li>
+                    </ul>
+                </nav>
+                <button id="openModalBtn"><img src="./assets/media/hot-air baloon.jpg" alt="Pop-up modal" height="50" width="50"></button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>User Info</h2>
+                        <p>Name: John Doe</p>
+                        <p>Email: john@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+             <script>
+                const modal = document.getElementById("myModal");
+                const btn = document.getElementById("openModalBtn");
+                const closeBtn = document.querySelector(".close");
+
+                // Open modal when button is clicked
+                btn.addEventListener("click", function() {
+                modal.style.display = "block";
+                });
+
+                // Close modal when "X" is clicked
+                closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+                });
+
+                // Close modal if user clicks outside the modal content
+                window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                });       
+            </script> 
+        </header>
+        <div class="box_wrapper">
+            <div class="box">
+
+                <form>
+                    <textarea placeholder="Place Here" cols="40"></textarea>
+                    <p></p>
+            
+                    <div id="group">
+                        <input type="file" id="imageInput"  accept="image/*">
+                         <label for="imageInput">
+                            <i class="fa-solid fa-image"></i>
+                        </label> 
+                        <button type="submit" id="button">Post</button>
+                    </div> 
+                     <div class="file-upload">
+                        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+                        <i class="fa-solid fa-image" id="fileIcon" alt="Upload" style="cursor:pointer;"></i>
+                        <span id="fileName"></span>
+                    </div> 
+                </form>
+              
+                 <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="imageUpload">Upload an image:</label>
+                    <br>
+                    <textarea placeholder="Type something">
+                    <br>
+                    <br>
+
+                </form>
+                    <input 
+                        type="file" 
+                        id="imageUpload" 
+                        name="imageUpload" 
+                        accept="image/*"  
+                    >
+                    <button type="submit">Post</button> 
+                <section>
+                </section>
+            </div>
+        </div>
+    </body> -->
 </html>

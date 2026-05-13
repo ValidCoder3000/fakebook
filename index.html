@@ -13,92 +13,51 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&display=swap" rel="stylesheet">
         <title>Fakebook</title>
     </head>
+        
     <body>
+      <main>
         <header>
-            <div class="container_class">
-                <h2>Fakebook</h2>
-                <nav>
-                    <ul>
-                        <li>Friends</li>
-                        <li>Pages</li>
-                        <li>Groups</li>
-                        <li>My ads</li>
-                        <li>Settings</li>
-                    </ul>
-                </nav>
-                <button id="openModalBtn"><img src="./assets/media/hot-air baloon.jpg" alt="Pop-up modal" height="50" width="50"></button>
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>User Info</h2>
-                        <p>Name: John Doe</p>
-                        <p>Email: john@example.com</p>
-                    </div>
-                </div>
+          <div class="header-flex">
+            <div>
+            <h1>FakeBook</h1></div>
+            <div class="header-middle">
+              <a href="#">Friends</a>
+              <a href="#">Pages</a>
+              <a href="#">Groups</a>
+              <a href="#">My ads</a>
+              <a href="#">Settings</a>
             </div>
-
-            <!-- <script>
-                const modal = document.getElementById("myModal");
-                const btn = document.getElementById("openModalBtn");
-                const closeBtn = document.querySelector(".close");
-
-                // Open modal when button is clicked
-                btn.addEventListener("click", function() {
-                modal.style.display = "block";
-                });
-
-                // Close modal when "X" is clicked
-                closeBtn.addEventListener("click", function() {
-                modal.style.display = "none";
-                });
-
-                // Close modal if user clicks outside the modal content
-                window.addEventListener("click", function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-                });       
-            </script> -->
+            <div>
+            <img src="./assets/media/hot-air baloon.jpg" alt="user-icon" id="user-icon"></div>
+          </div>
         </header>
-        <div class="box_wrapper">
-            <div class="box">
-
-                <form>
-                    <textarea placeholder="Place Here" cols="40"></textarea>
-                    <p></p>
-            
-                    <div id="group">
-                        <input type="file" id="imageInput"  accept="image/*">
-                        <!-- <label for="imageInput">
-                            <i class="fa-solid fa-image"></i>
-                        </label> -->
-                        <button type="submit" id="button">Post</button>
-                    </div> 
-                    <!-- <div class="file-upload">
-                        <input type="file" id="fileInput" accept="image/*" style="display:none;">
-                        <i class="fa-solid fa-image" id="fileIcon" alt="Upload" style="cursor:pointer;"></i>
-                        <span id="fileName"></span>
-                    </div> -->
-                </form>
-              
-                <!-- <form action="/upload" method="post" enctype="multipart/form-data">
-                    <label for="imageUpload">Upload an image:</label>
-                    <br>
-                    <textarea placeholder="Type something">
-                    <br>
-                    <br>
-
-                </form>
-                    <input 
-                        type="file" 
-                        id="imageUpload" 
-                        name="imageUpload" 
-                        accept="image/*"  
-                    >
-                    <button type="submit">Post</button> -->
-                <section>
-                </section>
+        <div class="user-info hidden">
+            <div class="info-header">
+              <input type="button" value="&times;" id="cancel-dropdown">
             </div>
+            <div class="info-body">
+              <p id="name">Name: </p>
+              <p id="username">User Name:</p>
+              <p id="email">Email: </p>
+            </div>
+          </div>
+        <div class="container">
+          <div class="input-field">
+            <div class="input-textarea"><textarea placeholder="What's new?"></textarea></div>
+            <div id="preview"></div>
+            <div class="input-buttons">
+              <div class="media-input-detail">
+                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <label for="fileInput">
+                <!-- <img src="./assets/media/media_icon.png" alt="Upload" id="media-icon"> -->
+                 <i class="fa-regular fa-image" id="media-icon"></i>
+                </label>
+                <span id="fileName" style="color:white; margin-left:10px;"></span>
+              </div>
+              <input type="button" value="Post" id="post" disabled>
+            </div>
+          </div>
         </div>
+      </main>
     </body>
 </html>
